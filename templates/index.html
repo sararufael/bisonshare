@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h4>These are the coolest books</h4>
+    <ol>
+    {% for book in books%}
+        <li>Title:{{ book.title}}, ISBN:{{ book.isbn}}, Author:{{ book.author}}, Condition:{{ book.condition}}, Edition:{{ book.edition}}</li>
+    {% endfor %}
+    </ol>
+     <a href="/" >New Book</a>
+</body>
+</html>
