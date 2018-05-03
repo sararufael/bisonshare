@@ -1,10 +1,10 @@
-from app import db
-
-from models import User, Book
 
 from flask import Blueprint, render_template, request, redirect, url_for
 
 app = Blueprint('app', __name__)
+
+from app import db
+from models import User, Book
 
 @app.route('/')
 def registration():
@@ -48,4 +48,4 @@ def login():
 
 @app.route('/processlogin', methods=['GET','POST'])
 def processlogin():
-    return redirect(url_for('index'))
+    return redirect(url_for('app.index'))
