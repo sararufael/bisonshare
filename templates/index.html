@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-     <h4>These are the coolest books</h4>
-    <ol>
+{% extends "base.html" %}
+{% block body %}
+    <h4>These are the coolest books</h4>
+
     {% for book in books%}
-        <li>Title:{{ book.title}}, ISBN:{{ book.isbn}}, Author:{{ book.author}}, Condition:{{ book.condition}}, Edition:{{ book.edition}}</li>
+        <div class="col-md-4">
+            <div class="well">
+                <strong>Title:</strong> {{ book.title}} <br/>
+                <strong>ISBN:</strong> {{ book.isbn}} <br/>
+                <strong>Author:</strong> {{ book.author}} <br/>
+                <strong>Condition:</strong> {{ book.condition}}<br/>
+                <strong>Edition:</strong> {{ book.edition}}
+            </div>
+        </div>
     {% endfor %}
-    </ol>
+
      <a href="/" >New Book</a>
-</body>
-</html>
+{% endblock %}
