@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body %}
-     <form action="{{ url_for('app.processregistration') }}" method="POST" >
-        Username: <input type="text" name="name" /><br />
+     <form action="{{ url_for('main.register') }}" method="POST" >
+        Username: <input type="text" name="username" /><br />
         Email: <input type="text" name="email" /><br />
         Password: <input type="text" name="password" /><br />
         <input type="submit" value="Submit" >
