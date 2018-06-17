@@ -25,6 +25,4 @@ def before_request():
 from routes import main
 app.register_blueprint(main)
 db.create_all()
-if __name__ == '__main__':
 
-    application.run(debug=True, use_debugger=True, use_reloader=False)
